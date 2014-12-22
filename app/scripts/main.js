@@ -21,7 +21,7 @@ greeter.greet();
 | As such, 'environment' settings will override any mobile or default values.
 |
 */
-AppInit.setConfig(settings);
+AppInit.setConfig(settings); 
 
 
 /*

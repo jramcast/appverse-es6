@@ -45,70 +45,45 @@
     </div>
 
 
-    <!--<script src="https://plus.google.com/js/client:plusone.js"></script>-->
 
     <!-- Temporary solution based on CDN. For development purpose only -->
     <script src="//cdnjs.cloudflare.com/ajax/libs/socket.io/0.9.16/socket.io.min.js"></script>
 
-    <!-- build:js scripts/scripts.js -->
+
+
+    <!-- Scripts -->
     <script src="bower_components/traceur-runtime/traceur-runtime.js"></script>
-    <script src="bower_components/angular/angular.js"></script>
-    <script src="bower_components/angular-cookies/angular-cookies.js"></script>
-    <script src="bower_components/angular-sanitize/angular-sanitize.js"></script>
-    <script src="bower_components/angular-ui-router/release/angular-ui-router.js"></script>
-    <script src="bower_components/angular-cache/dist/angular-cache.js"></script>
-    <script src="bower_components/angular-resource/angular-resource.js"></script>
+    <script src="bower_components/angular/angular.min.js"></script>
+    <script src="bower_components/angular-cookies/angular-cookies.min.js"></script>
+    <script src="bower_components/angular-sanitize/angular-sanitize.min.js"></script>
+    <script src="bower_components/angular-ui-router/release/angular-ui-router.min.js"></script>
+    <script src="bower_components/angular-cache/dist/angular-cache.min.js"></script>
+    <script src="bower_components/angular-resource/angular-resource.min.js"></script>
     <script src="bower_components/angular-translate/angular-translate.min.js"></script>
     <script src="bower_components/angular-translate-loader-static-files/angular-translate-loader-static-files.min.js"></script>
     <script src="bower_components/angular-dynamic-locale/src/tmhDynamicLocale.js"></script>
-    <script src="bower_components/lodash/dist/lodash.js"></script>
-    <script src="bower_components/restangular/dist/restangular.js"></script>
-    <script src="bower_components/socket.io-client/dist/socket.io.js"></script>
+    <script src="bower_components/lodash/dist/lodash.min.js"></script>
+    <script src="bower_components/restangular/dist/restangular.min.js"></script>
+    <script src="bower_components/socket.io-client/dist/socket.io.min.js"></script>
 
-    <script src="bower_components/appverse-web-html5-core/src/api-cache/module.js"></script>
-    <script src="bower_components/appverse-web-html5-core/src/api-cache/cache.directive.js"></script>
-    <script src="bower_components/appverse-web-html5-core/src/api-cache/cache.factory.js"></script>
-    <script src="bower_components/appverse-web-html5-core/src/api-cache/idb.service.js"></script>
-    <script src="bower_components/appverse-web-html5-core/src/api-detection/module.js"></script>
-    <script src="bower_components/appverse-web-html5-core/src/api-detection/mobile-libraries-loader.provider.js"></script>
-    <script src="bower_components/appverse-web-html5-core/src/api-detection/mobile-detector.provider.js"></script>
-    <script src="bower_components/appverse-web-html5-core/src/api-detection/detection.provider.js"></script>
-    <script src="bower_components/appverse-web-html5-core/src/api-detection/module-run.js"></script>
-    <script src="bower_components/appverse-web-html5-core/src/api-logging/module.js"></script>
-    <script src="bower_components/appverse-web-html5-core/src/api-logging/formatter-logger.provider.js"></script>
-    <script src="bower_components/appverse-web-html5-core/src/api-performance/module.js"></script>
-    <script src="bower_components/appverse-web-html5-core/src/api-performance/webworker.directive.js"></script>
-    <script src="bower_components/appverse-web-html5-core/src/api-performance/webworkerpool.factory.js"></script>
-    <script src="bower_components/appverse-web-html5-core/src/api-utils/module.js"></script>
-    <script src="bower_components/appverse-web-html5-core/src/api-utils/moduleseeker.provider.js"></script>
-    <script src="bower_components/appverse-web-html5-core/src/api-utils/base64.factory.js"></script>
-    <script src="bower_components/appverse-web-html5-core/src/api-utils/util.factory.js"></script>
-    <script src="bower_components/appverse-web-html5-core/src/api-serverpush/module.js"></script>
-    <script src="bower_components/appverse-web-html5-core/src/api-socketio/module.js"></script>
-    <script src="bower_components/appverse-web-html5-core/src/api-socketio/socket.provider.js"></script>
-    <script src="bower_components/appverse-web-html5-core/src/api-serverpush/socket.factory.js"></script>
-    <script src="bower_components/appverse-web-html5-core/src/api-serverpush/websocket.factory.js"></script>
-    <script src="bower_components/appverse-web-html5-core/src/api-rest/module.js"></script>
-    <script src="bower_components/appverse-web-html5-core/src/api-rest/multicast-rest.factory.js"></script>
-    <script src="bower_components/appverse-web-html5-core/src/api-rest/rest.directive.js"></script>
-    <script src="bower_components/appverse-web-html5-core/src/api-rest/rest.factory.js"></script>
-    <script src="bower_components/appverse-web-html5-core/src/api-router/module.js"></script>
-    <script src="bower_components/appverse-web-html5-core/src/api-configuration-default/module.js"></script>
-    <script src="bower_components/appverse-web-html5-core/src/api-configuration-loader/module.js"></script>
-    <script src="bower_components/appverse-web-html5-core/src/api-configuration/module.js"></script>
-    <script src="bower_components/appverse-web-html5-core/src/api-main/module.js"></script>
-    <script src="bower_components/appverse-web-html5-core/src/api-configuration-loader/configloader.provider.js"></script>
-    <script src="bower_components/appverse-web-html5-core/src/api-configuration-default/constants.js"></script>
-    <script src="bower_components/appverse-web-html5-core/src/api-configuration-loader/module-config.js"></script>
-    <script src="bower_components/appverse-web-html5-core/src/api-main/init.js"></script>
+    <!-- ########## Core modules ########## -->
+    <script src="bower_components/appverse-web-html5-core/dist/api-cache/api-cache.min.js"></script>
+    <script src="bower_components/appverse-web-html5-core/dist/api-detection/api-detection.min.js"></script>
+    <script src="bower_components/appverse-web-html5-core/dist/api-logging/api-logging.min.js"></script>
+    <script src="bower_components/appverse-web-html5-core/dist/api-performance/api-performance.min.js"></script>
+    <script src="bower_components/appverse-web-html5-core/dist/api-translate/api-translate.min.js"></script>
+    <script src="bower_components/appverse-web-html5-core/dist/api-utils/api-utils.min.js"></script>
+    <script src="bower_components/appverse-web-html5-core/dist/api-serverpush/api-serverpush.min.js"></script>
+    <script src="bower_components/appverse-web-html5-core/dist/api-router/api-router.min.js"></script>
+    <script src="bower_components/appverse-web-html5-core/dist/api-rest/api-rest.min.js"></script>
+    <script src="bower_components/appverse-web-html5-core/dist/api-main/api-main.min.js"></script>
 
-    <!-- endbuild -->
-
-    <!-- build:js({app,.tmp})-->
-    <script src="scripts/greeter.js"></script>
-    <script src="scripts/settings.js"></script>
-    <script src="scripts/main.js"></script>
-    <!-- endbuild -->
+    <!-- ########## Core modules: autoinjected. Check gruntfile.js ########## -->
+    <!-- injector:js -->
+    <script src="/scripts/greeter.js"></script>
+    <script src="/scripts/main.js"></script>
+    <script src="/scripts/settings.js"></script>
+    <!-- endinjector -->
 
     <script>
     System.get('.tmp/scripts\\main');

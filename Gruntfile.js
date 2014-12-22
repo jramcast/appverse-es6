@@ -36,7 +36,7 @@ module.exports = function (grunt) {
       },
       js: {
         files: ['<%= config.app %>/scripts/{,*/}*.js'],
-        tasks: ['traceur'],
+        tasks: ['traceur', 'injector:js'],
         options: {
           livereload: true
         }
@@ -329,7 +329,24 @@ module.exports = function (grunt) {
           dest: '.tmp/scripts'
         }]
       },
-    }
+    },
+
+    // Automatically include all es6 converted files in demo's html as script tags
+    injector: {
+      options: {
+        relative: false,
+        transform: function (path) {
+            // Demo server directly mounts .tmp folder so the reference to .tmp is not required
+            path = path.replace('.tmp/', '');
+            return '<script src="'+ path +'"></script>';
+        }
+      },
+      js: {
+        files: {
+            '<%= config.app %>/index.html': '.tmp/scripts/**/*.js',
+        }
+      }
+    },
   });
 
 

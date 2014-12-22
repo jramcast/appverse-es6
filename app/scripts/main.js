@@ -1,5 +1,10 @@
+'use strict';
+
 import {Greeter} from './scripts\\greeter';
 import {settings} from './scripts\\settings';
+import {HomeController} from './scripts/controllers\\home-controller';
+
+/* global AppInit */
 
 
 // A test
@@ -21,7 +26,7 @@ greeter.greet();
 | As such, 'environment' settings will override any mobile or default values.
 |
 */
-AppInit.setConfig(settings); 
+AppInit.setConfig(settings);
 
 
 /*
@@ -43,11 +48,33 @@ AppInit.bootstrap('appverseEs6');
 
 /*
 |--------------------------------------------------------------------------
-| Create main module
+| Create main application module module
 |--------------------------------------------------------------------------
 */
 
-angular.module('appverseEs6', ['COMMONAPI']);
+var app = angular.module('appverseEs6', ['COMMONAPI']);
+
+
+app.config(($stateProvider, $urlRouterProvider) => {
+
+    $urlRouterProvider.otherwise('/');
+
+    $stateProvider.state('home', {
+        url: '/home',
+        templateUrl: 'views/home.html',
+        controller: 'HomeController'
+    });
+
+    $stateProvider.state('land', {
+        url: '/'
+    });
+
+});
+
+app.controller('HomeController', HomeController);
+
+
+
 
 
 

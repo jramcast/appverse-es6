@@ -37,6 +37,8 @@
         <p><a class="btn btn-lg btn-success" href="#">Login! <span class="glyphicon glyphicon-ok"></span></a></p>
       </div>
 
+      <div ui-view class="myslide" autoscroll="false"></div>
+
 
       <div class="footer">
         <p><span class="glyphicon glyphicon-heart"></span> from ...</p>
@@ -48,8 +50,6 @@
 
     <!-- Temporary solution based on CDN. For development purpose only -->
     <script src="//cdnjs.cloudflare.com/ajax/libs/socket.io/0.9.16/socket.io.min.js"></script>
-
-
 
     <!-- Scripts -->
     <script src="bower_components/traceur-runtime/traceur-runtime.js"></script>
@@ -80,9 +80,11 @@
 
     <!-- ########## Core modules: autoinjected. Check gruntfile.js ########## -->
     <!-- injector:js -->
+    <script src="/scripts/controllers/home-controller.js"></script>
     <script src="/scripts/greeter.js"></script>
     <script src="/scripts/main.js"></script>
     <script src="/scripts/settings.js"></script>
+    <script src="/scripts/states.js"></script>
     <!-- endinjector -->
 
     <script>

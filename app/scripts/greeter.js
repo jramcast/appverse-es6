@@ -1,3 +1,4 @@
+// An example class
 export class Greeter {
     constructor(message) {
       this.message = message;

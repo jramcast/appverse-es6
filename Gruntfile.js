@@ -36,7 +36,7 @@ module.exports = function (grunt) {
       },
       js: {
         files: ['<%= config.app %>/scripts/{,*/}*.js'],
-        tasks: ['jshint', 'traceur'],
+        tasks: ['traceur'],
         options: {
           livereload: true
         }
@@ -209,16 +209,6 @@ module.exports = function (grunt) {
     },
 
     // The following *-min tasks produce minified files in the dist folder
-    imagemin: {
-      dist: {
-        files: [{
-          expand: true,
-          cwd: '<%= config.app %>/images',
-          src: '{,*/}*.{gif,jpeg,jpg,png}',
-          dest: '<%= config.dist %>/images'
-        }]
-      }
-    },
 
     svgmin: {
       dist: {
@@ -323,7 +313,6 @@ module.exports = function (grunt) {
       ],
       dist: [
         'copy:styles',
-        'imagemin',
         'svgmin'
       ]
     },
@@ -354,6 +343,7 @@ module.exports = function (grunt) {
 
     grunt.task.run([
       'clean:server',
+      'traceur',
       'wiredep',
       'concurrent:server',
       'autoprefixer',

@@ -4,7 +4,8 @@
   "dependencies": {
     "bootstrap": "~3.2.0",
     "traceur-runtime": "~0.0.79",
-    "appverse-web-html5-core": "~0.2.1"
+    "appverse-web-html5-security": "~0.2.1",
+    "appverse-web-html5-core": "develop"
   },
   "devDependencies": {
     "traceur": "~0.0.79"

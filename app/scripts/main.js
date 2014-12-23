@@ -3,6 +3,8 @@
 import {Greeter} from './scripts\\greeter';
 import {settings} from './scripts\\settings';
 import {HomeController} from './scripts/controllers\\home-controller';
+import {LoginModalOpenerController} from './scripts/controllers\\login-modal-opener-controller';
+import {LoginModalController} from './scripts/controllers\\login-modal-controller';
 
 /* global AppInit */
 
@@ -52,7 +54,8 @@ AppInit.bootstrap('appverseEs6');
 |--------------------------------------------------------------------------
 */
 
-var app = angular.module('appverseEs6', ['COMMONAPI']);
+
+var app = angular.module('appverseEs6', ['COMMONAPI', 'ui.bootstrap']);
 
 
 app.config(($stateProvider, $urlRouterProvider) => {
@@ -71,7 +74,17 @@ app.config(($stateProvider, $urlRouterProvider) => {
 
 });
 
-app.controller('HomeController', HomeController);
+
+/*
+|--------------------------------------------------------------------------
+| Controllers
+|--------------------------------------------------------------------------
+*/
+
+app
+    .controller('HomeController', HomeController)
+    .controller('LoginModalOpenerController', LoginModalOpenerController)
+    .controller('LoginModalController', LoginModalController);
 
 
 

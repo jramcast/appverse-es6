@@ -34,9 +34,10 @@
         <h3 class="text-muted">Appverse ec6</h3>
       </div>
 
-      <div class="jumbotron">
+      <div class="jumbotron" ng-controller="LoginModalOpenerController">
         <h1 id="message"></h1>
-        <p><a class="btn btn-lg btn-success" href="#">Login! <span class="glyphicon glyphicon-ok"></span></a></p>
+        <p ng-show="selected">Selection from a modal: {{ selected }}</p>
+        <p><a class="btn btn-lg btn-success" ng-click="open()">Login! <span class="glyphicon glyphicon-ok"></span></a></p>
       </div>
 
       <div ui-view class="myslide" autoscroll="false"></div>
@@ -49,13 +50,12 @@
     </div>
 
 
-
     <!-- Temporary solution based on CDN. For development purpose only -->
     <script src="//cdnjs.cloudflare.com/ajax/libs/socket.io/0.9.16/socket.io.min.js"></script>
 
     <!-- Scripts -->
     <script src="bower_components/traceur-runtime/traceur-runtime.js"></script>
-    <script src="bower_components/angular/angular.min.js"></script>
+    <script src="bower_components/angular/angular.js"></script>
     <script src="bower_components/angular-cookies/angular-cookies.min.js"></script>
     <script src="bower_components/angular-sanitize/angular-sanitize.min.js"></script>
     <script src="bower_components/angular-ui-router/release/angular-ui-router.min.js"></script>
@@ -64,6 +64,8 @@
     <script src="bower_components/angular-translate/angular-translate.min.js"></script>
     <script src="bower_components/angular-translate-loader-static-files/angular-translate-loader-static-files.min.js"></script>
     <script src="bower_components/angular-dynamic-locale/src/tmhDynamicLocale.js"></script>
+    <script src="bower_components/angular-bootstrap/ui-bootstrap.js"></script>
+    <script src="bower_components/angular-bootstrap/ui-bootstrap-tpls.js"></script>
     <script src="bower_components/lodash/dist/lodash.min.js"></script>
     <script src="bower_components/restangular/dist/restangular.min.js"></script>
     <script src="bower_components/socket.io-client/dist/socket.io.min.js"></script>
@@ -83,6 +85,8 @@
     <!-- ########## Core modules: autoinjected. Check gruntfile.js ########## -->
     <!-- injector:js -->
     <script src="/scripts/controllers/home-controller.js"></script>
+    <script src="/scripts/controllers/login-modal-controller.js"></script>
+    <script src="/scripts/controllers/login-modal-opener-controller.js"></script>
     <script src="/scripts/greeter.js"></script>
     <script src="/scripts/main.js"></script>
     <script src="/scripts/settings.js"></script>

@@ -5,9 +5,10 @@
     "bootstrap": "~3.2.0",
     "traceur-runtime": "~0.0.79",
     "appverse-web-html5-security": "~0.2.1",
-    "appverse-web-html5-core": "https://github.com/jramcast/appverse-web-html5-core.git#master"
+    "appverse-web-html5-core": "https://github.com/jramcast/appverse-web-html5-core.git#master",
+    "appverse-web-html5-ui": "~0.2.1"
   },
-  "devDependencies": { 
+  "devDependencies": {
     "traceur": "~0.0.79"
   }
 }
